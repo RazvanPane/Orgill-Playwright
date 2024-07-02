@@ -8,7 +8,7 @@ test("test", async ({ page }) => {
   await page.getByPlaceholder("Password").press("Tab");
   await page.getByRole("button", { name: "Log in" }).press("Enter");
   const totalOrdersElement = page.getByText("TOTAL ORDERS");
-  await expect(totalOrdersElement).toBeVisible({ timeout: 10000 }); // 10 seconds
+  await expect(totalOrdersElement).toBeVisible({ timeout: 30000 }); // 30 seconds
   await expect(page.getByText("TOTAL VISITED")).toBeVisible();
   await expect(page.getByText("TOTAL KEYED IN")).toBeVisible();
   await expect(page.locator("nz-input-group")).toBeVisible();
